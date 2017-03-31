@@ -11,6 +11,7 @@
     <application
         android:icon="@drawable/wheel"
         android:label="WheelDemo"
+        android:theme="@android:style/Theme.Material.Light"
         tools:replace="android:label">
 
         <activity android:name=".WheelDemo">
@@ -78,6 +79,14 @@
         <activity
             android:name=".HoloWheelActivity"
             android:label="Holo Wheel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="kankan.wheel.extended.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.conncui.wheelview.LoopRecyclerActivity"
+            android:label="AutoPollRecyclerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="kankan.wheel.extended.WHEEL_SAMPLE"/>

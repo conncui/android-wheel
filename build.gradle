@@ -1,21 +1,3 @@
-subprojects {
-    buildscript {
-        repositories {
-            jcenter()
-        }
-        dependencies {
-            /**
-             Instant Run is disabled:
-             Android Plugin for Gradle version 2.1.0 does not support Instant Run. Please update to version 2.2.0-alpha1
-             * */
-            classpath 'com.android.tools.build:gradle:2.3.0'
-            println "} File[Aspectj-csdn-innost] dependencies"
-        }
-    }
-    project.repositories {
-        jcenter()
-    }
-}
 buildscript {
     repositories {
         jcenter()

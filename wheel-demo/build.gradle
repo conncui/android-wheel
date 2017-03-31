@@ -18,18 +18,14 @@ android {
                     'src/'
             ]
             res.srcDirs = [
-                    'res'
+                    'res/res-kankan',
+                    'res/res-conncui',
             ]
         }
     }
     packagingOptions {
         //com.android.build.api.transform.TransformException: com.android.builder.packaging.DuplicateFileException: Duplicate files copied in APK META-INF/LICENSE
         exclude 'META-INF/LICENSE'
-    }
-}
-repositories {
-    flatDir {
-        dirs 'libs'
     }
 }
 

@@ -13,11 +13,16 @@ android {
         main {
             manifest.srcFile 'AndroidManifest.xml'
             res.srcDirs = [
-                    'res'
+                    'res/res-kankan',
+                    'res/res-conncui',
             ]
             java.srcDirs = [
                     'src/'
             ]
         }
+    }
+    dependencies {
+        /**recycleview*/
+        compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibray"
     }
 }
