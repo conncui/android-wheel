@@ -12,7 +12,7 @@ subprojects {
             println "} File[Aspectj-csdn-innost] dependencies"
         }
     }
-    project.repositories{
+    project.repositories {
         jcenter()
     }
 }
