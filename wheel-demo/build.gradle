@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    defaultConfig {
+        compileSdkVersion rootProject.ext.compileSdkVersion
+        buildToolsVersion rootProject.ext.buildToolsVersion
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        applicationId "kankan.wheel.demo.extended"
+        versionCode 1
+        versionName "1.0"
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = [
+                    'src/'
+            ]
+            res.srcDirs = [
+                    'res'
+            ]
+        }
+    }
+    packagingOptions {
+        //com.android.build.api.transform.TransformException: com.android.builder.packaging.DuplicateFileException: Duplicate files copied in APK META-INF/LICENSE
+        exclude 'META-INF/LICENSE'
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile project(":wheel")
+}
